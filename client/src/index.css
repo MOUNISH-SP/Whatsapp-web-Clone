@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply antialiased text-gray-800 bg-gray-50;
+  }
+}
+
+/* Custom scrollbar for chat area */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba(156, 163, 175, 0.5);
+  border-radius: 20px;
+}
+
+/* Precise Dark Web WhatsApp Fallback using Invert Algorithms */
+html.dark-theme {
+    filter: invert(1) hue-rotate(180deg);
+}
+html.dark-theme img, html.dark-theme svg, html.dark-theme .no-invert {
+    filter: invert(1) hue-rotate(180deg);
+}
+
+@keyframes slideInLeft {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+}
+.slide-in-left {
+    animation: slideInLeft 0.3s cubic-bezier(0.1, 0.82, 0.25, 1) forwards;
+}
